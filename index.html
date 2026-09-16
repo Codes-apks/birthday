@@ -1,61 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#090914">
-    <title>Для тебя 🎁</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050509">
+<title>С Днём рождения! 🎉</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="stars"></div>
+<div id="particles"></div>
 
-    <main class="card" id="start">
-        <div class="emoji">🎁</div>
+<main id="loading">
 
-        <h1>Эй, именинник!</h1>
+    <div class="loader"></div>
 
-        <p>
-            У меня для тебя<br>
-            кое-что есть...
-        </p>
+    <div id="status">Инициализация...</div>
 
-        <button id="open">
-            Открыть
-        </button>
+    <div class="sub" id="sub">
+        Подожди немного...
+    </div>
 
-        <div class="hint">нажми на кнопку</div>
-    </main>
+</main>
 
 
-    <main class="card hidden" id="birthday">
+<main id="birthday" class="hidden">
 
-        <div class="emoji big">🎂</div>
+    <div class="cake">🎂</div>
 
-        <h1>С Днём рождения!</h1>
+    <h1>
+        С ДНЁМ<br>
+        <span>РОЖДЕНИЯ!</span>
+    </h1>
 
-        <p class="message">
-            Желаю тебе море счастья,<br>
-            денег без счёта,<br>
-            приключений без последствий<br>
-            и людей, с которыми<br>
-            можно творить всякую дичь.
-        </p>
+    <div class="line"></div>
 
-        <p class="final">
-            Пусть этот год будет<br>
-            ещё круче предыдущего! 🚀
-        </p>
+    <p>
+        Сегодня тот самый день,
+        <br>
+        когда можно официально
+        <br>
+        забыть про все дела.
+    </p>
 
-        <div class="signature">
-            — от человека,<br>
-            который решил сделать тебе QR-код
-        </div>
+    <p>
+        Желаю тебе:
+        <br>
+        много счастья,
+        <br>
+        денег без счёта,
+        <br>
+        приключений без последствий
+        <br>
+        и побольше поводов
+        <br>
+        улыбаться.
+    </p>
 
-    </main>
+    <p class="gold">
+        Пусть этот год будет
+        <br>
+        <b>ЕЩЁ КРУЧЕ.</b> 🚀
+    </p>
 
-    <script src="script.js"></script>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+
