@@ -22,16 +22,16 @@ body {
 
     background:
         radial-gradient(
-            circle at 20% 15%,
-            rgba(103, 72, 180, .35),
+            circle at 20% 20%,
+            #302060 0,
             transparent 35%
         ),
         radial-gradient(
-            circle at 85% 85%,
-            rgba(30, 100, 180, .25),
-            transparent 40%
+            circle at 80% 80%,
+            #142c58 0,
+            transparent 35%
         ),
-        #07070e;
+        #090914;
 
     color: white;
 
@@ -45,38 +45,113 @@ body {
 
 
 /* =========================
+   ЗВЁЗДЫ
+   ========================= */
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.7) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        90px 90px,
+        130px 130px;
+
+    background-position:
+        0 0,
+        40px 70px;
+
+    opacity: .25;
+}
+
+
+/* =========================
+   КАРТОЧКА
+   ========================= */
+
+.card {
+
+    width: 100%;
+    max-width: 440px;
+
+    padding: 38px 28px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.065);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 25px 90px rgba(0,0,0,.5);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    animation: appear .8s ease;
+}
+
+
+/* =========================
    ЗАГРУЗКА
    ========================= */
 
 #loading {
-    width: 100%;
-    max-width: 420px;
 
-    text-align: center;
+    min-height: 180px;
 
-    animation: fadeIn .8s ease;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
 }
+
 
 .loader {
-    width: 46px;
-    height: 46px;
 
-    margin: 0 auto 25px;
+    font-size: 50px;
 
-    border: 3px solid rgba(255,255,255,.12);
-    border-top-color: #ffd447;
+    margin-bottom: 20px;
 
-    border-radius: 50%;
-
-    animation: spin 1s linear infinite;
+    animation:
+        float 2s ease-in-out infinite;
 }
+
 
 #status {
-    font-size: 20px;
+
+    font-size: 21px;
+
     font-weight: 600;
+
+    color: rgba(255,255,255,.9);
 }
 
-.sub {
+
+#sub {
+
     margin-top: 10px;
 
     font-size: 14px;
@@ -90,34 +165,17 @@ body {
    ========================= */
 
 #birthday {
-    width: 100%;
-    max-width: 440px;
-
-    max-height: calc(100dvh - 40px);
-
-    overflow-y: auto;
-
-    padding: 32px 24px;
-
-    text-align: center;
-
-    border-radius: 28px;
-
-    background:
-        rgba(255,255,255,.065);
-
-    border:
-        1px solid rgba(255,255,255,.12);
-
-    box-shadow:
-        0 25px 80px rgba(0,0,0,.5);
-
-    backdrop-filter: blur(20px);
-
-    -webkit-backdrop-filter: blur(20px);
 
     animation:
         birthdayIn .8s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
 }
 
 
@@ -126,7 +184,9 @@ body {
    ========================= */
 
 .cake {
-    font-size: clamp(55px, 18vw, 78px);
+
+    font-size:
+        clamp(55px, 18vw, 78px);
 
     line-height: 1;
 
@@ -142,6 +202,7 @@ body {
    ========================= */
 
 h1 {
+
     margin: 0 0 20px;
 
     font-size:
@@ -152,34 +213,42 @@ h1 {
     letter-spacing: -2px;
 
     font-weight: 900;
+
 }
 
+
 h1 span {
-    display: inline-block;
 
     color: #ffd447;
 
     text-shadow:
-        0 0 30px rgba(255,212,71,.25);
+        0 0 30px
+        rgba(255,212,71,.25);
+
 }
 
 
 /* =========================
-   РАЗДЕЛИТЕЛЬ
+   ЛИНИЯ
    ========================= */
 
 .line {
+
     width: 65px;
+
     height: 3px;
 
-    margin: 0 auto 24px;
+    margin:
+        0 auto 24px;
 
     border-radius: 10px;
 
     background: #ffd447;
 
     box-shadow:
-        0 0 15px rgba(255,212,71,.4);
+        0 0 15px
+        rgba(255,212,71,.4);
+
 }
 
 
@@ -188,7 +257,9 @@ h1 span {
    ========================= */
 
 p {
-    margin: 0 0 20px;
+
+    margin:
+        0 0 20px;
 
     font-size:
         clamp(16px, 4.5vw, 18px);
@@ -197,14 +268,21 @@ p {
 
     color:
         rgba(255,255,255,.78);
+
 }
+
 
 .gold {
+
     color: #ffd447;
+
 }
 
+
 .gold b {
+
     font-size: 1.15em;
+
 }
 
 
@@ -213,12 +291,14 @@ p {
    ========================= */
 
 .signature {
+
     margin-top: 28px;
 
     padding-top: 20px;
 
     border-top:
-        1px solid rgba(255,255,255,.08);
+        1px solid
+        rgba(255,255,255,.08);
 
     font-size: 13px;
 
@@ -226,6 +306,7 @@ p {
 
     color:
         rgba(255,255,255,.35);
+
 }
 
 
@@ -234,6 +315,7 @@ p {
    ========================= */
 
 .confetti {
+
     position: fixed;
 
     top: -30px;
@@ -246,15 +328,7 @@ p {
 
     animation:
         fall linear forwards;
-}
 
-
-/* =========================
-   СКРЫТИЕ
-   ========================= */
-
-.hidden {
-    display: none !important;
 }
 
 
@@ -262,23 +336,26 @@ p {
    АНИМАЦИИ
    ========================= */
 
-@keyframes spin {
-
-    to {
-        transform: rotate(360deg);
-    }
-
-}
-
-
-@keyframes fadeIn {
+@keyframes appear {
 
     from {
+
         opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(.96);
+
     }
 
     to {
+
         opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
     }
 
 }
@@ -287,19 +364,23 @@ p {
 @keyframes birthdayIn {
 
     from {
+
         opacity: 0;
 
         transform:
             translateY(30px)
             scale(.94);
+
     }
 
     to {
+
         opacity: 1;
 
         transform:
             translateY(0)
             scale(1);
+
     }
 
 }
@@ -309,15 +390,19 @@ p {
 
     0%,
     100% {
+
         transform:
             translateY(0)
             rotate(-3deg);
+
     }
 
     50% {
+
         transform:
             translateY(-10px)
             rotate(3deg);
+
     }
 
 }
@@ -326,57 +411,97 @@ p {
 @keyframes fall {
 
     to {
+
         transform:
             translateY(115vh)
             translateX(var(--x))
             rotate(720deg);
+
     }
 
 }
 
 
 /* =========================
-   ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ
+   МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+   ========================= */
+
+@media (max-width: 480px) {
+
+    body {
+
+        padding:
+            14px;
+
+    }
+
+    .card {
+
+        padding:
+            28px 20px;
+
+        border-radius:
+            26px;
+
+    }
+
+}
+
+
+/* =========================
+   НИЗКИЕ ЭКРАНЫ
    ========================= */
 
 @media (max-height: 700px) {
 
     body {
-        padding: 12px;
+
+        padding:
+            10px;
+
     }
 
-    #birthday {
-        max-height: calc(100dvh - 24px);
+    .card {
 
         padding:
             22px 18px;
+
+        max-height:
+            calc(100dvh - 20px);
+
+        overflow-y:
+            auto;
+
     }
 
     .cake {
+
         font-size: 50px;
 
         margin-bottom: 10px;
+
     }
 
     h1 {
+
         font-size: 32px;
 
         margin-bottom: 15px;
+
     }
 
     .line {
+
         margin-bottom: 18px;
+
     }
 
     p {
+
         margin-bottom: 14px;
 
         font-size: 15px;
-    }
 
-    .signature {
-        margin-top: 20px;
-        padding-top: 15px;
     }
 
 }
