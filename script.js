@@ -3,6 +3,7 @@ const birthday = document.getElementById("birthday");
 const status = document.getElementById("status");
 const sub = document.getElementById("sub");
 
+
 setTimeout(() => {
 
     status.textContent = "Проверка получателя...";
@@ -64,6 +65,8 @@ setTimeout(() => {
 }, 4900);
 
 
+// Конфетти
+
 function fireworks() {
 
     const emojis = [
@@ -116,4 +119,3 @@ function fireworks() {
     }
 
 }
-
