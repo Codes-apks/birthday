@@ -1,45 +1,26 @@
 const loading = document.getElementById("loading");
 const birthday = document.getElementById("birthday");
+
 const status = document.getElementById("status");
 const sub = document.getElementById("sub");
 
 
-setTimeout(() => {
-
-    status.textContent = "Проверка получателя...";
-    sub.textContent = "Поиск именинника";
-
-}, 1000);
-
+// Небольшая вступительная анимация
 
 setTimeout(() => {
 
-    status.textContent = "✓ Получатель найден";
-    sub.textContent = "Сообщение подготовлено";
+    status.textContent = "Готовлю поздравление...";
+    sub.textContent = "Ещё секундочку ✨";
 
-}, 2000);
+}, 1200);
 
 
 setTimeout(() => {
 
-    status.textContent = "3";
-    sub.textContent = "";
+    status.textContent = "Почти готово...";
+    sub.textContent = "🎂";
 
-}, 2800);
-
-
-setTimeout(() => {
-
-    status.textContent = "2";
-
-}, 3500);
-
-
-setTimeout(() => {
-
-    status.textContent = "1";
-
-}, 4200);
+}, 2400);
 
 
 setTimeout(() => {
@@ -57,12 +38,12 @@ setTimeout(() => {
             50,
             80,
             50,
-            250
+            200
         ]);
 
     }
 
-}, 4900);
+}, 3500);
 
 
 // Конфетти
@@ -80,17 +61,19 @@ function fireworks() {
         "🎂"
     ];
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 100; i--;) {
 
         const el =
             document.createElement("div");
 
-        el.className = "confetti";
+        el.className =
+            "confetti";
 
         el.textContent =
             emojis[
                 Math.floor(
-                    Math.random() * emojis.length
+                    Math.random() *
+                    emojis.length
                 )
             ];
 
@@ -99,11 +82,15 @@ function fireworks() {
 
         el.style.setProperty(
             "--x",
-            (-150 + Math.random() * 300) + "px"
+            (-150 +
+                Math.random() * 300) +
+            "px"
         );
 
         el.style.animationDuration =
-            (2.5 + Math.random() * 3) + "s";
+            (2.5 +
+                Math.random() * 3) +
+            "s";
 
         el.style.animationDelay =
             Math.random() * .8 + "s";
